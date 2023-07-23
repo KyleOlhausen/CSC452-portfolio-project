@@ -285,6 +285,10 @@ nav li:hover{
 
 
 /* CONTACT */
+#contact .section-title{
+    margin-bottom: 50px;
+}
+
 .contact-container {
     height: 400px;
     display: flex;
@@ -318,6 +322,18 @@ form {
     width: 330px;
 }
 
+form input, form textarea{
+    border: 0;
+    padding: 10px;
+    outline: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+form button{
+    padding: 10px;
+    width: 150px;
+}
 
 /* FOOTER */
 #footer {
