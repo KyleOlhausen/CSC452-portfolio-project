@@ -185,7 +185,26 @@ nav ul {
 
 /* CONTACT */
 .contact-container {
-    
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.contact-icons {
+    width: 330px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 330px;
 }
 
 /* FOOTER */
