@@ -184,12 +184,17 @@ nav ul {
 
 
 /* CONTACT */
-
+.contact-container {
+    
+}
 
 /* FOOTER */
 #footer {
     height: 70px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
