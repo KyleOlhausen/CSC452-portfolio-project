@@ -45,9 +45,10 @@ nav {
     background-color: rgba(0, 0, 0, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    position:sticky;
+    position: sticky;
     font-size: 25px;
     top: 0;
+    z-index: 2;
 }
 
 .header-name {
@@ -122,6 +123,9 @@ nav ul {
     width: 50%;
     height: 370px;
     font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .card-title, .card-tech, .card-description {
@@ -221,4 +225,18 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
 }
