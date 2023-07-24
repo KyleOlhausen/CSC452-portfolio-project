@@ -1,6 +1,7 @@
 :root {
     --background-color: rgba(28, 28, 44, 0.918);
     --text-color: white;
+    --nav-bar-color: rgba(0, 0, 0, 0.7);
     scroll-behavior: smooth;
 }
 
@@ -34,9 +35,46 @@ a {
 }
 
 
+/* ANIMATION */
+.hidden-abt {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show-abt-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden-title {
+    filter: blur(100px);
+    opacity: 0;
+    transform: translateY(100px) translateZ(0px);
+    transition: all .8s;
+}
+
+.show-title {
+    filter: blur(0px);
+    opacity: 1;
+    transform: none;
+}
+
+.hidden-card {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
 /* NAV */
 nav {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--nav-bar-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: fixed;
@@ -93,7 +131,7 @@ nav li:hover{
 
     .hamburger{
         display: block;
-        padding-left: 90px;
+        margin-left: 90px;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -112,7 +150,7 @@ nav li:hover{
         top: 60px;
         gap: 0;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: var(--nav-bar-color);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -135,7 +173,7 @@ nav li:hover{
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .hero-container {
@@ -233,17 +271,6 @@ nav li:hover{
     cursor: pointer;
 }
 
-.hidden {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-}
- 
 
 /* ABOUT */
 .about-card {
@@ -253,7 +280,7 @@ nav li:hover{
     border-radius: 100px;
     border-style: none none none solid;
     border-color: rgb(137, 137, 137);
-    color: white;
+    color: var(--text-color);
     background-color: black;
     margin: 50px 0 150px 0;
     font-size: 17px;
@@ -276,8 +303,6 @@ nav li:hover{
     height: 20px;
     width: 20px;
 }
-
-
 
 .about-card p {
     padding-bottom: 40px;
@@ -335,11 +360,12 @@ form button{
     width: 150px;
 }
 
+
 /* FOOTER */
 #footer {
     height: 70px;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,8 +380,3 @@ form button{
     height: 15px;
     width: 15px;
 }
-
-
-
-
-
