@@ -14,7 +14,7 @@ document.querySelectorAll('.nav-link').forEach(link => link.addEventListener("cl
 
 
 //Animation
-const hiddenElements = document.querySelectorAll('.hidden-card, .hidden-title, .hidden-abt, .hidden-header-name');
+const hiddenElements = document.querySelectorAll('.hidden-card, .hidden-title, .hidden-abt');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
