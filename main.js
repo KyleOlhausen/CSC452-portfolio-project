@@ -33,3 +33,18 @@ const observer = new IntersectionObserver(entries => {
 hiddenElements.forEach(element => {
     observer.observe(element)
 })
+
+
+//Modal
+const modal = document.querySelector('.modal');
+const modalCloseBtn = document.querySelector('.modal-close');
+const modalOpenBtn = document.querySelector('.modal-open');
+
+modalOpenBtn.addEventListener('click', () => {
+    modal.showModal();
+})
+
+modalCloseBtn.addEventListener('click', () => {
+    modal.close();
+})
+
